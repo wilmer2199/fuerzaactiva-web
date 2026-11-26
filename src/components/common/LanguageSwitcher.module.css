@@ -1,0 +1,45 @@
+.langBtn {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  background-color: transparent;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.langBtn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Quita el borde blanco al hacer clic con el ratón */
+.langBtn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Mantiene un foco sutil solo si navegas con teclado (Tab) */
+.langBtn:focus-visible {
+  outline: 2px solid #eab308;
+  outline-offset: 2px;
+}
+
+/* Estado activo en amarillo (con mayor especificidad para ganar a estilos globales de button) */
+.switcher .langBtn.active,
+.switcher .langBtn.active:focus,
+.switcher .langBtn.active:active {
+  background-color: #eab308;
+  color: #06182a;
+}
+
+.switcher .langBtn.active:hover {
+  background-color: #facc15;
+  color: #06182a;
+}

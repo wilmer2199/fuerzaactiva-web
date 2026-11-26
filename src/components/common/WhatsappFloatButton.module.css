@@ -1,0 +1,296 @@
+.wrapper {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Botón flotante verde */
+.whatsappFloat {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 999px;
+  background-color: #25d366;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsappFloat:hover,
+.whatsappFloat:focus,
+.whatsappFloat:active {
+  background-color: #20bd5a;
+  color: #ffffff;
+  outline: none;
+}
+
+.whatsappFloat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.55);
+}
+
+.whatsappFloat:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.whatsappIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Notificación "1" en la esquina superior derecha */
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #06182a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  animation: popIn 0.28s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  75% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Pestañita / tarjeta de chat */
+.chatCard {
+  position: relative;
+  width: 310px;
+  max-width: calc(100vw - 2rem);
+  border-radius: 1rem;
+  overflow: visible;
+  background-color: #f4f7f5;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  animation: cardIn 0.2s ease-out;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chatHeader {
+  background-color: #25d366;
+  padding: 0.85rem 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.chatBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.chatBrandDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.closeBtn {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 999px;
+  border: none;
+  background-color: rgba(15, 118, 61, 0.45);
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.closeBtn:hover,
+.closeBtn:focus,
+.closeBtn:active {
+  background-color: rgba(15, 118, 61, 0.75);
+  color: #ffffff;
+  outline: none;
+}
+
+.chatBody {
+  padding: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.messageBubble {
+  position: relative;
+  background-color: #ffffff;
+  color: #1e293b;
+  border-radius: 0.85rem;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.messageGreeting {
+  margin: 0 0 0.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.messageQuestion {
+  margin: 0;
+  color: #334155;
+}
+
+.actionRow {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.openChatBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(37, 211, 102, 0.35);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.openChatBtn:hover {
+  background-color: #20bd5a;
+  transform: translateY(-1px);
+}
+
+.actionIcon {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Popover del código QR */
+.qrPopover {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.75rem);
+  width: 184px;
+  padding: 0.75rem;
+  border-radius: 0.85rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.45rem;
+  z-index: 30;
+  pointer-events: none;
+  animation: cardIn 0.16s ease-out;
+}
+
+.qrImage {
+  width: 148px;
+  height: 148px;
+  display: block;
+  border-radius: 0.45rem;
+}
+
+.qrCaption {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.25;
+}
+
+@media (max-width: 860px) {
+  .wrapper {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .whatsappFloat {
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsappIcon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .badge {
+    min-width: 18px;
+    height: 18px;
+    font-size: 0.68rem;
+  }
+
+  .chatCard {
+    width: 292px;
+  }
+}

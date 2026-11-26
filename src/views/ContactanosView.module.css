@@ -1,0 +1,349 @@
+/* header contactanos*/
+.quienesPage {
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+  background-color: var(--background);
+}
+
+
+/* Cabecera de Quiénes somos con color y presencia propia */
+.heroBanner {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #072340 0%, #0d3b66 55%, #06182a 100%);
+  border-bottom: 3px solid #eab308;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+
+.heroBannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.28;
+  display: block;
+}
+
+.heroBannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 24, 42, 0.88) 0%,
+    rgba(10, 61, 102, 0.72) 50%,
+    rgba(6, 24, 42, 0.88) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.heroBannerTitle {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  /*text-transform: uppercase;*/ /* para colocar mayusculas*/
+  margin: 0;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.heroBannerLine {
+  width: 90px;
+  height: 3px;
+  background-color: #eab308;
+  border-radius: 999px;
+  margin-top: 0.65rem;
+}
+
+/* css pagina*/
+
+.pageContent {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.rem;
+  text-align: center;
+
+  & .topActions {
+    & .backBtn {
+      background: transparent;
+      border: 1px solid rgba(234, 179, 8, 0.35);
+      color: #eab308;
+      padding: 0.55rem 1rem;
+      border-radius: 0.6rem;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: rgba(234, 179, 8, 0.14);
+        color: #facc15;
+      }
+    }
+  } 
+
+  & .sectionCard {
+    background: linear-gradient(
+      145deg,
+      rgba(10, 61, 102, 0.32) 0%,
+      rgba(6, 24, 42, 0.95) 100%
+    );
+    border: 1px solid rgba(234, 179, 8, 0.32);
+    border-radius: 1.25rem; 
+    padding: 2rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35); 
+
+    & .sectionHeader {
+      margin-bottom: 1.5rem;
+
+      & .eyebrow {
+        margin: 0 0 0.35rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #eab308;
+      }
+
+      & .sectionTitle {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+        font-weight: 600;
+        color: #ffffff;
+        line-height: 1.3;
+      }
+
+      & .sectionSubtitle {
+        margin: 0;
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      & .addressLine {
+        margin: 0.5rem 0 0;
+        padding: 0.75rem 1rem;
+        border-radius: 0.75rem;
+        background-color: rgba(6, 24, 42, 0.75);
+        border: 1px solid rgba(234, 179, 8, 0.2);
+        color: #e2e8f0;
+        font-size: 0.86rem;
+        line-height: 1.55;
+      }
+    }
+  }
+
+  && .mapSection {
+    & .mapFrameWrap {
+      position: relative;
+      border-radius: 2.5rem;
+      overflow: hidden;
+      border: 1px solid rgba(234, 179, 8, 0.35);
+      background-color: rgba(6, 24, 42, 0.85);
+
+      & .mapIframe {
+        width: 100%;
+        height: 380px;
+        border: 0;
+        display: block;
+      }
+
+      & .directionsBtn {
+        position: absolute;
+        bottom: 1.1rem;
+        right: 1.25rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.7rem 1.2rem;
+        border-radius: 999px;
+        background-color: #eab308;
+        color: #06182a;
+        font-size: 0.86rem;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+        transition: background-color 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: #facc15;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  & .formSection {
+    & .formGrid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.15rem 1.35rem;
+
+      & .fullSpan {
+        grid-column: 1 / -1;
+      }
+
+      & .fieldGroup {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+
+        & .label {
+          font-size: 0.88rem;
+          font-weight: 600;
+          color: #f1f5f9;
+        }
+
+        & .input {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 0.82rem 0.95rem;
+          border-radius: 0.65rem;
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          background-color: rgba(6, 24, 42, 0.88);
+          color: #ffffff;
+          font-family: inherit;
+          font-size: 0.94rem;
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+          &::placeholder {
+            color: #64748b;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: #eab308;
+            box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.16);
+          }
+
+          &.input:-webkit-autofill,
+          .input:-webkit-autofill:hover,
+          .input:-webkit-autofill:active {
+            -webkit-text-fill-color: #ffffff;
+            caret-color: #ffffff;
+            -webkit-box-shadow: 0 0 0 1000px #06182a inset;
+            box-shadow: 0 0 0 1000px #06182a inset;
+            border-color: rgba(255, 255, 255, 0.16);
+            transition: background-color 5000s ease-in-out 0s;
+            }
+
+          &.input:-webkit-autofill:focus {
+            -webkit-text-fill-color: #ffffff;
+            caret-color: #ffffff;
+            outline: none;
+            border-color: #eab308;
+            -webkit-box-shadow:
+              0 0 0 1000px #06182a inset,
+              0 0 0 3px rgba(234, 179, 8, 0.16);
+            box-shadow:
+              0 0 0 1000px #06182a inset,
+              0 0 0 3px rgba(234, 179, 8, 0.16);
+          }
+        }
+
+        & .radioGroup {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.85rem;
+          margin-top: 0.15rem;
+
+          & .radioOption {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.7rem 1.15rem;
+            border-radius: 0.65rem;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background-color: rgba(6, 24, 42, 0.78);
+            color: #e2e8f0;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+
+            & input[type='radio'] {
+              accent-color: #eab308;
+              cursor: pointer;
+            }
+
+            &.radioOptionActive {
+              border-color: #eab308;
+              background-color: rgba(234, 179, 8, 0.14);
+              color: #ffffff;
+            }
+          }
+        }
+      }
+
+      & .submitWrap {
+        margin-top: 0.5rem;
+
+        & .submitBtn {
+          width: 100%;
+          padding: 0.9rem 1.5rem;
+          border: none;
+          border-radius: 0.65rem;
+          background-color: #eab308;
+          color: #06182a;
+          font-family: inherit;
+          font-size: 0.9rem;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: background-color 0.2s ease, transform 0.2s ease;
+
+          &:hover {
+            background-color: #facc15;
+            transform: translateY(-1px);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    padding: 1.5rem 1rem 3rem;
+
+    & .sectionCard {
+      padding: 1.4rem 1.15rem;
+    }
+
+    & .mapSection .mapFrameWrap {
+      border-radius: 1.5rem;
+
+      & .mapIframe {
+        height: 290px;
+      }
+    }
+
+    & .formSection .formGrid {
+      grid-template-columns: 1fr;
+    }
+    & .mapSection .mapFrameWrap {
+      border-radius: 1.5rem;
+
+      & .mapIframe {
+        height: 290px;
+      }
+
+      & .directionsBtn {
+        bottom: 0.85rem;
+        right: 0.85rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

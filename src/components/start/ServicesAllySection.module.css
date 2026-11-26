@@ -1,0 +1,322 @@
+.wrapperSection {
+  padding: 3.5rem 1rem 1.5rem;
+  background-color: var(--background);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* BLOQUE 1: Respuesta 24/7 + Fuerza Activa aliado comercial */
+.responseBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.responseCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 2.25rem;
+  border-radius: 0.85rem;
+  background: linear-gradient(135deg, rgba(10, 61, 102, 0.35) 0%, rgba(30, 41, 59, 0.45) 100%);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+.responseLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 780px;
+}
+
+.iconBadge {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 153, 255, 0.14);
+  border: 1px solid rgba(0, 153, 255, 0.35);
+  color: var(--primary-light);
+}
+
+.responseTitle {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 0.45rem;
+  line-height: 1.2;
+}
+
+.responseTitle span {
+  color: #eab308;
+}
+
+.responseText {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.askButton {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.25rem;
+  border: none;
+  border-bottom: 2px solid #eab308;
+  border-radius: 0;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.askButton:hover {
+  color: #eab308;
+  border-bottom-color: #facc15;
+  transform: translateY(-1px);
+}
+
+/* Sub-bloque debajo de Respuesta 24/7: Fuerza Activa aliado comercial */
+.allyBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.75rem 2rem;
+  border-radius: 0.85rem;
+  background-color: rgba(30, 41, 59, 0.28);
+  border: 1px solid var(--border);
+  border-left: 4px solid #eab308;
+}
+
+.allyLeft {
+  display: flex;
+  flex-direction: column;
+  max-width: 780px;
+}
+
+.allyEyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  margin: 0 0 0.35rem;
+}
+
+.allyHeading {
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.65rem;
+  line-height: 1.25;
+}
+
+.allyCopy {
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 960px;
+}
+
+/* BLOQUE 2: Servicios (Asesoría y Vigilancia) */
+.servicesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+
+}
+
+.servicesHeader {
+  
+  max-width: 720px;
+  margin: 0 auto;
+
+}
+
+.servicesTitle {
+  font-size: clamp(1.65rem, 2.6vw, 2.15rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  
+}
+
+.servicesUnderline {
+  width: 68px;
+  height: 3px;
+  background-color: #eab308;
+  border-radius: 999px;
+  margin: 0.75rem auto 0.9rem;
+}
+
+.servicesSubtitle {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0;
+  
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2.25rem 2rem;
+  border-radius: 0.85rem;
+  background-color: rgba(30, 41, 59, 0.35);
+  border: 1px solid var(--border);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+  text-align: center;
+  align-items: center;
+}
+
+.serviceCard:hover {
+  border-color: rgba(0, 153, 255, 0.45);
+  transform: translateY(-3px);
+}
+
+.serviceTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.serviceName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.serviceDesc {
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.moreInfoBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.65rem 1.35rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 1px solid rgba(234, 179, 8, 0.65);
+  color: #eab308;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.moreInfoBtn:hover {
+  background-color: #eab308;
+  color: #06182a;
+}
+
+/* MODO TELÉFONO: Todo apilado uno debajo del otro y centrado */
+@media (max-width: 860px) {
+  /* 1. Respuesta 24/7 centrado empezando por el icono */
+  .responseCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.35rem;
+    padding: 1.85rem 1.4rem;
+  }
+
+  .responseLeft {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  /* 2. Aliado comercial: todo debajo uno del otro centrado */
+  .allyBanner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.35rem;
+    padding: 1.75rem 1.4rem;
+  }
+
+  .allyLeft {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* 3. Encabezado Servicios: título, raya amarilla abajo y texto abajo centrado */
+  .servicesHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 0.35rem;
+  }
+
+  .servicesTitle {
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  .servicesUnderline {
+    margin: 0.50rem auto 0.80rem;
+  }
+
+
+  /* 4. Tarjetas Asesoría y Vigilancia: icono, título, texto y botón centrados */
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    
+  }
+
+  .serviceTop {
+    align-items: center;
+    text-align: center;
+  }
+
+  .moreInfoBtn {
+    margin: 0 auto;
+  }
+}

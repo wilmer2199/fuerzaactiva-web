@@ -1,0 +1,162 @@
+/* Benefits.module.css */
+
+.benefitsSection {
+  padding: 4rem 1rem;
+  background-color: var(--background);
+}
+
+.benefitsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefitsHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.benefitsHeader h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.benefitsHeader p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Línea decorativa amarilla */
+.titleUnderline {
+  width: 80px;
+  height: 3px;
+  background-color: #EAB308;
+  margin: 0.75rem auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+/* Cuadrícula de 2 columnas */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+/* Tarjeta individual */
+.benefitCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background-color: rgba(30, 41, 59, 0.4);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 153, 255, 0.4);
+}
+
+.benefitIcon {
+  flex-shrink: 0;
+  color: var(--primary-light);
+  background: rgba(0, 153, 255, 0.15);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefitIcon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.benefitContent h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.benefitContent p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.benefitsTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* MODO TELÉFONO: Igual que Servicios, todo apilado y centrado */
+@media (max-width: 860px) {
+  .benefitsHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+  }
+
+  .benefitsTitle {
+    margin: 0;
+  }
+
+  .benefitsHeader h2 {
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .titleUnderline {
+    margin: 0.50rem auto 0.80rem;
+  }
+
+  .benefitsHeader p {
+    margin: 0 auto;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .benefitCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 0.85rem;
+  }
+
+  .benefitContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .benefitContent h3 {
+    margin: 0 0 0.5rem;
+  }
+
+  .benefitContent p {
+    line-height: 1.65;
+  }
+}

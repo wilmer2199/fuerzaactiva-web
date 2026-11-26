@@ -1,0 +1,504 @@
+
+/* header quienes somos */
+.quienesPage {
+  padding-top: 0rem;
+  padding-bottom: 1rem;
+  background-color: var(--background);
+}
+
+
+/* Cabecera de Quiénes somos con color y presencia propia */
+.heroBanner {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #072340 0%, #0d3b66 55%, #06182a 100%);
+  border-bottom: 3px solid #eab308;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+
+.heroBannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.28;
+  display: block;
+}
+
+.heroBannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 24, 42, 0.88) 0%,
+    rgba(10, 61, 102, 0.72) 50%,
+    rgba(6, 24, 42, 0.88) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.heroBannerTitle {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  /*text-transform: uppercase;*/ /* para colocar mayusculas*/
+  margin: 0;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.heroBannerLine {
+  width: 90px;
+  height: 3px;
+  background-color: #eab308;
+  border-radius: 999px;
+  margin-top: 0.65rem;
+}
+
+/* Texto institucional debajo de la cabecera */
+.bodyContainer {
+  max-width: 1180px;
+  margin: 3rem auto 0;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-template-columns: 0.95fr 1.15fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.photoWrapper {
+  position: relative;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid rgba(234, 179, 8, 0.45);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+  background-color: #04111f;
+}
+
+.teamPhoto {
+  width: 100%;
+  height: auto;
+  max-height: 470px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+
+
+.leadParagraph {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.leadParagraph strong {
+  color: var(--text-primary);
+}
+
+.legalBox {
+  padding: 1rem 1.25rem;
+  border-radius: 0.65rem;
+  background-color: rgba(10, 61, 102, 0.28);
+  border-left: 3px solid #eab308;
+  color: var(--text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.legalBox strong {
+  color: #eab308;
+}
+
+@media (max-width: 900px) {
+  .bodyContainer {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .photoWrapper {
+    order: -1;
+  }
+
+  .teamPhoto {
+    max-height: 380px;
+  }
+
+}
+
+/* Fila de 3 columnas: Misión, Visión y Nuestros valores */
+.mvvSection {
+  max-width: 1180px;
+  margin: 3rem auto 0;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mvvRowCard {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: center;
+  padding: 1.65rem 1.85rem;
+  border-radius: 0.9rem;
+  background-color: rgba(30, 41, 59, 0.35);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+ 
+}
+
+.mvvHeaderCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.mvvTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+}
+
+.mvvUnderline {
+  width: 52px;
+  height: 3px;
+  background-color: #eab308;
+  border-radius: 999px;
+  margin-top: 0.55rem;
+  align-self: center;
+  margin: 0.55rem auto 0;
+  margin-bottom: 0.55rem;
+
+}
+
+.mvvText {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .mvvRowCard {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 0.85rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .mvvHeaderCol {
+    align-items: center;
+    text-align: center;
+  }
+
+  .mvvTitle {
+    text-align: center;
+  }
+
+  .mvvUnderline {
+    margin: 0.55rem auto 0;
+  }
+
+  .mvvText {
+    text-align: center;
+  }
+}
+
+/* Sección semántica: Política de Selección y Vestimenta del Personal */
+.policySection {
+  max-width: 1180px;
+  margin: 3.5rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.policyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+/* Lista de requisitos de selección */
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 1.15rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.18rem;
+  color: #eab308;
+}
+
+/* Lista de vestimenta con iconos SVG para cada prenda */
+.uniformList {
+  list-style: none;
+  padding: 0;
+  margin: 1.15rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.uniformItem {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 0.65rem;
+  background-color: rgba(6, 24, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.uniformItem strong {
+  color: #ffffff;
+}
+
+.garmentIconBox {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 0.55rem;
+  background-color: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eab308;
+}
+
+.garmentIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.dotacionNote {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+/* Modo teléfono: Vestimenta del Personal debajo de Política de Selección */
+@media (max-width: 860px) {
+  .policySection {
+    margin-top: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .policyGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .uniformItem {
+    gap: 0.75rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .mvvTitle{
+   margin: 0;
+   line-height: 1.15;
+   text-align: center;
+
+  }
+
+  .mvvUnderline{
+    margin: 0.50rem auto 0.80rem;
+  }
+
+  .mvvCard{
+    margin-top: 2rem;
+  }
+}
+
+/* Bloque avalado por DIGESERVISP */
+.digeservispBox {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+  margin-top: 0.25rem;
+  margin-bottom: 4.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.85rem;
+  background-color: rgba(10, 61, 102, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #eab308;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.digeservispLogo {
+  flex-shrink: 0;
+  width: 78px;
+  height: 78px;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(234, 179, 8, 0.45);
+}
+
+.digeservispTitle {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.35rem;
+}
+
+.digeservispText {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.digeservispText strong {
+  color: #eab308;
+}
+
+@media (max-width: 768px) {
+  .digeservispBox {
+    flex-direction: column;
+    /*align-items: flex-start;*/
+    align-items: center;
+    text-align: center;
+    gap: 0.9rem;
+    padding: 1.1rem;
+    
+  }
+}
+
+/* Sección Solvencia y Legalidad */
+.solvenciaSection {
+  max-width: 1180px;
+  margin: 3.5rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.solvenciaCard {
+  padding: 2.75rem 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(10, 61, 102, 0.38) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.solvenciaIconWrap {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.15rem;
+  border-radius: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  color: #eab308;
+}
+
+.solvenciaTitle {
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.solvenciaUnderline {
+  width: 56px;
+  height: 3px;
+  background-color: #eab308;
+  border-radius: 999px;
+  margin: 0.65rem auto 1rem;
+}
+
+.solvenciaDesc {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.entesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 820px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.enteBadge {
+  padding: 1.05rem 1.25rem;
+  border-radius: 0.7rem;
+  background-color: rgba(6, 24, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.enteBadge:hover {
+  border-color: rgba(234, 179, 8, 0.65);
+  color: #eab308;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .solvenciaCard {
+    padding: 2rem 1.25rem;
+  }
+
+  .entesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .entesGrid {
+    grid-template-columns: 1fr;
+  }
+}

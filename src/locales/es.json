@@ -1,0 +1,21 @@
+{
+  "brand": {
+    "nameShort": "Fuerza Activa",
+    "nameFull": "FUERZA ACTIVA DE ORIENTE, C.A."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "¿Quiénes somos?",
+    "services": "Servicios",
+    "contact": "Contáctanos"
+  },
+  "hero": {
+    "title": "Seguridad privada a tu alcance",
+    "subtitleLine1": "Somos el aliado estratégico que protege los activos",
+    "subtitleLine2": "de importantes compañías industriales y comerciales"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "developedBy": "Desarrollado por"
+  }
+}

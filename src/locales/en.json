@@ -1,0 +1,21 @@
+    {
+  "brand": {
+    "nameShort": "Fuerza Activa",
+    "nameFull": "FUERZA ACTIVA DE ORIENTE, C.A."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Private Security Within Your Reach",
+    "subtitleLine1": "We are the strategic partner protecting the assets",
+    "subtitleLine2": "of leading industrial and commercial companies"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "developedBy": "Developed by"
+  }
+}

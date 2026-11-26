@@ -1,0 +1,176 @@
+/* Header moderno y transparente/marino sobre el Hero */
+.siteHeader {
+  
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(6, 24, 42, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.siteHeaderTransparent {
+  background-color: rgba(15, 36, 56, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.headerInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.65rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: #ffffff;
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.logoImg {
+  height: 64px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.brandLink:hover .logoImg {
+  transform: scale(1.04);
+}
+
+.brandText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.navLink,
+.dropdownTrigger {
+  background: none;
+  border: none;
+  color: #e2e8f0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.45rem 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover,
+.navLink:focus,
+.dropdownTrigger:hover,
+.dropdownTrigger:focus {
+  color: #eab308;
+  outline: none;
+}
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.45rem;
+  min-width: 185px;
+  background-color: rgba(10, 34, 59, 0.96);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 0.4rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  z-index: 200;
+}
+
+.dropdownItem {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 0.55rem 0.85rem;
+  border-radius: 7px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+}
+
+.contactCta {
+  background-color: #eab308;
+  color: #06182a;
+  padding: 0.55rem 1.15rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contactCta:hover {
+  background-color: #facc15;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .headerInner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .navMenu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+  }
+
+  .logoImg {
+    height: 38px;
+  }
+}

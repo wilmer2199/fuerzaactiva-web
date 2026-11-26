@@ -1,0 +1,123 @@
+.whySection {
+  padding: 4rem 1rem;
+  background-color: var(--background);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Columna izquierda */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: clamp(1.85rem, 2.8vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.underline {
+  width: 72px;
+  height: 3px;
+  background-color: #eab308;
+  border-radius: 999px;
+}
+
+.introText {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0.35rem 0 0;
+  max-width: 440px;
+}
+
+/* Columna derecha: lista desplegable */
+.accordionList {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordionItem:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.accordionTrigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.35rem 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.accordionTrigger:hover,
+.accordionTrigger:focus {
+  background-color: transparent;
+  color: #eab308;
+  outline: none;
+}
+
+.accordionTrigger:active {
+  transform: none;
+}
+
+.arrowIcon {
+  flex-shrink: 0;
+  color: #eab308;
+  transition: transform 0.25s ease;
+}
+
+.arrowOpen {
+  transform: rotate(90deg);
+}
+
+.itemTitle {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.accordionTrigger:hover .itemTitle {
+  border-bottom-color: #eab308;
+}
+
+.accordionPanel {
+  padding: 0 0.5rem 1.35rem 2.15rem;
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 860px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .introText {
+    max-width: 100%;
+  }
+}
