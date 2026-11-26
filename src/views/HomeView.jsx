@@ -2,10 +2,10 @@ import { AboutTrayectoria } from '../components/start/AboutTrayectoria.jsx';
 import { ServicesAllySection } from '../components/start/ServicesAllySection.jsx';
 import { WhySecuritySection } from '../components/start/WhySecuritySection.jsx';
 import { BodyFooterSection } from '../components/layout/HomeViewFooterSection.jsx';
-import {Benefits} from '../components/start/benefits.jsx';
-import {useTranslation} from '../context/LanguageContext.jsx'
+import { Benefits } from '../components/start/benefits.jsx';
+import { useTranslation } from '../context/LanguageContext.jsx';
+import heroBgImg from '../assets/imgf1.jpg';
 
-//json ccon traduccion en la pagina
 const HERO_COPY = {
   es: {
     imgAlt: 'Fondo Seguridad',
@@ -25,34 +25,27 @@ export function HomeView({ onNavigate }) {
   const { lang } = useTranslation();
   const hero = HERO_COPY[lang] || HERO_COPY.es;
 
-    return (
-        <>
-            <main>
-                {/* Hero Section (puedes mantenerlo en index.css o modularizarlo también) */}
-                <section className="hero-section">
-                    <img src="./src/assets/imgf1.jpg" alt="Fondo Seguridad" />
-                    <h1>{hero.title}</h1>
-                        <h2> {hero.subtitle}</h2>
-                   
-                </section>
+  return (
+    <>
+      <main>
+        <section className="hero-section">
+          <img src={heroBgImg} alt={hero.imgAlt} />
+          <h1>{hero.title}</h1>
+          <h2>{hero.subtitle}</h2>
+        </section>
 
-                {/* sección de trayectoria css module  */}
-                
-                <section>
-                    <AboutTrayectoria onNavigate={onNavigate} />
-                </section> 
+        <section>
+          <AboutTrayectoria onNavigate={onNavigate} />
+        </section>
 
-                <ServicesAllySection  onNavigate={onNavigate}/> 
+        <ServicesAllySection onNavigate={onNavigate} />
 
-                {/* Sección de Beneficios con CSS Module */}
-                <Benefits/>
-                
-                <WhySecuritySection />
-                
-                
-                <BodyFooterSection onNavigate={onNavigate} />
+        <Benefits />
 
-            </main>
-        </>
-    )
+        <WhySecuritySection />
+
+        <BodyFooterSection onNavigate={onNavigate} />
+      </main>
+    </>
+  );
 }
