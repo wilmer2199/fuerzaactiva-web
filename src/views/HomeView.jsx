@@ -4,7 +4,7 @@ import { WhySecuritySection } from '../components/start/WhySecuritySection.jsx';
 import { BodyFooterSection } from '../components/layout/HomeViewFooterSection.jsx';
 import { Benefits } from '../components/start/benefits.jsx';
 import { useTranslation } from '../context/LanguageContext.jsx';
-import heroBgImg from '../assets/imgf1.jpg';
+import heroBgImg from '../../public/imgf1.jpg';
 
 const HERO_COPY = {
   es: {
