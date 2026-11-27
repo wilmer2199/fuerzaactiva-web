@@ -162,7 +162,7 @@ export function QuieneSomosFooter({ onNavigate }) {
 
               {/* Correo */}
               <a
-                href="mailto:fuerzaactiva.venta@gmail.com"
+                href="mailto:fuerzaactivaoriente.ventas@gmail.com"
                 className={styles.contactItem}
               >
                 <span className={styles.contactIcon} aria-hidden="true">
