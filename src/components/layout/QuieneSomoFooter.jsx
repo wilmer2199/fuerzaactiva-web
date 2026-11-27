@@ -173,7 +173,7 @@ export function QuieneSomosFooter({ onNavigate }) {
                 </span>
                 <span className={styles.contactMeta}>
                   <span className={styles.contactLabel}>{copy.emailLabel}</span>
-                  <span className={styles.contactValue}>Fuerzaactivaoriente.ventas@gmail.com</span>
+                  <span className={styles.contactValue}>fuerzaactivaoriente.ventas@gmail.com</span>
                 </span>
               </a>
 
