@@ -156,7 +156,7 @@ export function QuieneSomosFooter({ onNavigate }) {
                 </span>
                 <span className={styles.contactMeta}>
                   <span className={styles.contactLabel}>{copy.whatsappLabel}</span>
-                  <span className={styles.contactValue}>0414-951-3574</span>
+                  <span className={styles.contactValue}>0414-9513574</span>
                 </span>
               </a>
 
