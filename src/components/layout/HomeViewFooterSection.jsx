@@ -170,7 +170,7 @@ export function BodyFooterSection({ onNavigate }) {
                 </span>
                 <span className={styles.contactMeta}>
                   <span className={styles.contactLabel}>{copy.emailLabel}</span>
-                  <span className={styles.contactValue}>fuerzaactiva.venta@gmail.com</span>
+                  <span className={styles.contactValue}>Fuerzaactivaoriente.ventas@gmail.com</span>
                 </span>
               </a>
 
