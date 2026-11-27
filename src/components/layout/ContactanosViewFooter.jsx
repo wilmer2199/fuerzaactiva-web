@@ -132,7 +132,7 @@ export function ContactanosViewFooter({ onNavigate }) {
                 </span>
                 <span className={styles.contactMeta}>
                   <span className={styles.contactLabel}>{copy.emailLabel}</span>
-                  <span className={styles.contactValue}>fuerzaactiva.venta@gmail.com</span>
+                  <span className={styles.contactValue}>fuerzaactivaoriente.ventas@gmail.com</span>
                 </span>
               </a>
 
